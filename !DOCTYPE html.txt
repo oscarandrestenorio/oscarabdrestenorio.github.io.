@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Seguridad y Salud en el Trabajo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background-color: #1a1a1a;
+      color: #f4f4f4;
+    }
+
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    body.dark .navbar {
+      background-color: #2a2a2a;
+    }
+
+    .navbar a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    body.dark .navbar a {
+      color: #f4f4f4;
+    }
+
+    .navbar a:hover {
+      color: #007bff;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #007bff;
+    }
+
+    body.dark h2 {
+      color: #66b0ff;
+    }
+
+    #inicio {
+      background: linear-gradient(to right, #007bff, #0056b3);
+      color: #fff;
+      text-align: center;
+    }
+
+    #inicio h1 {
+      font-size: 3rem;
+    }
+
+    #inicio h2 {
+      color: #fff;
+    }
+
+    #acerca img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 1rem 0;
+      object-fit: cover;
+    }
+
+    .proyectos-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+
+    .proyecto {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    body.dark .proyecto {
+      background: #2a2a2a;
+    }
+
+    .proyecto:hover {
+      transform: translateY(-10px);
+    }
+
+    .proyecto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .proyecto h3 {
+      font-size: 1.5rem;
+      margin: 1rem;
+    }
+
+    .proyecto p {
+      padding: 0 1rem 1rem;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    body.dark .proyecto p {
+      color: #ccc;
+    }
+
+    .habilidades-lista {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+
+    .habilidad {
+      background: #005566;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 1rem;
+    }
+
+    body.dark .habilidad {
+      background: #005566;
+    }
+
+    #contacto a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 700;
+      margin: 0.5rem;
+    }
+
+    body.dark #contacto a {
+      color: #66b0ff;
+    }
+
+    #contacto a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .navbar a {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      section {
+        padding: 3rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div>
+      <a href="#inicio">Inicio</a>
+      <a href="#acerca">Acerca de Mí</a>
+      <a href="#proyectos">Mis Proyectos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  </nav>
+
+  <section id="inicio">
+    <h1>Bienvenidos a mi Portafolio</h1>
+    <p><h2>Oscar Andres Tenorio</h2></p>
+    <p>Especialista en Seguridad y Salud en el Trabajo</p>
+  </section>
+
+  <section id="acerca">
+    <h2>Acerca de Mí</h2>
+    <img src=".img/foto-personal.jpg" alt="Foto personal">
+    <p>Soy un profesional dedicado a garantizar entornos laborales seguros y saludables. Con experiencia en la implementación de programas de prevención de riesgos y cumplimiento normativo, mi objetivo es proteger la integridad de los trabajadores y optimizar la productividad empresarial.</p>
+  </section>
+
+  <section id="proyectos">
+    <h2>Mis Proyectos</h2>
+    <div class="proyectos-container">
+      <div class="proyecto">
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto 1">
+        <h3>Programa de Capacitación en Seguridad</h3>
+        <p>Desarrollé un programa integral de formación para 500 empleados, reduciendo incidentes laborales en un 30%.</p>
+      </div>
+      <div class="proyecto">
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto 2">
+        <h3> Auditoría de Riesgos Industriales</h3>
+        <p>Realicé una auditoría completa en una planta manufacturera, identificando y mitigando 15 riesgos críticos.</p>
+      </div>
+      <div class="proyecto">
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto 3">
+        <h3>Implementación de Normas ISO 45001</h3>
+        <p>Lideré la certificación ISO 45001 en una empresa, asegurando el cumplimiento de estándares internacionales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <div class="habilidades-lista">
+      <span class="habilidad">Gestión de Riesgos</span>
+      <span class="habilidad">Normas ISO 45001</span>
+      <span class="habilidad">Capacitación en Seguridad</span>
+      <span class="habilidad">Auditorías de Seguridad</span>
+      <span class="habilidad">Prevención de Accidentes</span>
+      <span class="habilidad">Ergonomía Laboral</span>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Contáctame para colaboraciones o consultas:</p>
+    <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a>
+    <a href="https://www.linkedin.com/in/tuperfil" target="_blank">LinkedIn</a>
+  </section>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      const button = document.querySelector('.theme-toggle');
+      button.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    }
+
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
